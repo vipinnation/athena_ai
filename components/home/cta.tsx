@@ -24,7 +24,7 @@ export default function CTA() {
             </h1>
 
             <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-none">
-              Let's discuss how our AI solutions can drive your success.
+              Let&apos;s discuss how our AI solutions can drive your success.
             </p>
           </div>
 
