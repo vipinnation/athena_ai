@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
-import "./globals.css"; 
+import "./globals.css";
 import CONSTANTS from "@/constants/constants";
 import Footer from "@/components/layout/footer.component";
 import Header from "@/components/layout/header.component";
-
+import type React from "react";
+import { ThemeProvider } from "@/components/layout/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,10 +19,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-gray-900`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={`antialiased min-h-screen`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

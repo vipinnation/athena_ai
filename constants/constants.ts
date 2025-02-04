@@ -1,9 +1,9 @@
 const APP_DETAILS = {
-  shortName: "Athena AI",
+  shortName: "Nexo Future",
   logo: "/logo.png",
   favicon: "/favicon.png",
   keywords: [
-    "Athena AI",
+    "Nexo Future",
     "AI",
     "Analytics",
     "Machine Learning",
@@ -11,9 +11,9 @@ const APP_DETAILS = {
     "Predictive Analytics",
     "Computer Vision",
   ],
-  name: "Athena AI - Empowering Businesses with AI-Driven Solutions",
+  name: "Nexo Future - Empowering Businesses with AI-Driven Solutions",
   description:
-    "Athena AI provides cutting-edge AI solutions for businesses, including Machine Learning, Natural Language Processing, Predictive Analytics, and Computer Vision.",
+    "Nexo Future provides cutting-edge AI solutions for businesses, including Machine Learning, Natural Language Processing, Predictive Analytics, and Computer Vision.",
 };
 
 const CONSTANTS = {
