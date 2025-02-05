@@ -2,6 +2,7 @@ import AIPromo from "@/components/home/ai_promo";
 import CTA from "@/components/home/cta";
 import ServiceSection from "@/components/home/service-section";
 import { Technologies } from "@/components/home/technologies";
+
 export default function Home() {
   return (
     <div>
@@ -19,11 +20,25 @@ export default function Home() {
           />
           Your browser does not support the video tag.
         </video>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10 dark:hidden"
+        >
+          <source
+            src="https://res.cloudinary.com/divcixw4e/video/upload/v1738769674/Comp_1_svd0ll.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
 
         <h1 className="text-7xl font-light text-center max-w-5xl leading-tight text-white">
           Empowering Businesses with
           <br />
-          <span className="text-sky-400 font-semibold">AI</span>-Driven Solutions
+          <span className="text-sky-400 font-semibold">AI</span>-Driven
+          Solutions
         </h1>
 
         {/* Scroll Indicator */}

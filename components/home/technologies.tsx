@@ -1,16 +1,23 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "../ui/moving-cards";
+import AbodePng from "@/assets/images/Adobe.png";
+import AtlassianPng from "@/assets/images/Atlassian.png";
+import FigmaPng from "@/assets/images/Figma.png";
+import FramerPng from "@/assets/images/Framer.png";
+import GithubPng from "@/assets/images/GitHub.png";
+import GitlabPng from "@/assets/images/GitLab.png";
+import MixPanelPng from "@/assets/images/Mixpanel.png";
+import MobbinPng from "@/assets/images/Mobbin.png";
+import NotionPng from "@/assets/images/Notion.png";
+import ProtopiePng from "@/assets/images/Protopie.png";
+import VercelPng from "@/assets/images/Vercel.png";
 
 export function Technologies() {
   return (
-    <div className="flex items-center">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="left"
-        speed="normal"
-      />
+    <div className="flex items-center max-w-7xl mx-auto">
+      <InfiniteMovingCards items={testimonials} direction="left" speed="fast" />
       <p className="uppercase text-xl">Technologies</p>
     </div>
   );
@@ -18,32 +25,47 @@ export function Technologies() {
 
 const testimonials = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    image: AbodePng.src,
+    name: "Adobe",
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    image: AtlassianPng.src,
+    name: "Atlassian",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    image: FigmaPng.src,
+    name: "Figma",
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    image: FramerPng.src,
+    name: "Framer",
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+    image: GithubPng.src,
+    name: "Github",
+  },
+  {
+    image: GitlabPng.src,
+    name: "GitLab",
+  },
+  {
+    image: MixPanelPng.src,
+    name: "MixPanel",
+  },
+  {
+    image: MobbinPng.src,
+    name: "Mobbin",
+  },
+  {
+    image: NotionPng.src,
+    name: "Notion",
+  },
+  {
+    image: ProtopiePng.src,
+    name: "Protopie",
+  },
+  {
+    image: VercelPng.src,
+    name: "Vercel",
   },
 ];

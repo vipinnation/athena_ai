@@ -1,15 +1,4 @@
 import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-  IconArrowWaveRightUp,
-  IconBoxAlignTopLeft,
-  IconBoxAlignRightFilled,
-} from "@tabler/icons-react";
-import { Skeleton } from "../ui/skeleton";
 import { ServiceCard } from "./service-card";
 
 const ServiceSection = () => {
@@ -35,25 +24,25 @@ const ServiceSection = () => {
           <div className="flex gap-4 mb-4">
             <ServiceCard
               title="Machine Learning"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description="Unlock insights and automate decision-making with advanced predictive models."
               isAIPowered={true}
               className="w-4/5"
             />
             <ServiceCard
               title="Natural Language Processing"
               className="w-full"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description="Enhance customer interactions through intelligent chatbots, sentiment analysis, and language translation."
             />
           </div>
           <div className="flex gap-4">
             <ServiceCard
               title="Predictive Analytics"
               className="w-full"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description="Leverage data-driven insights to forecast trends, optimize operations, and make informed decisions."
             />
             <ServiceCard
               title="Computer Vision"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description="Enable real-time image and video analysis for applications like facial recognition, object detection, and quality control."
               className="w-4/5"
             />
           </div>

@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import Logo from "@/assets/images/icon.png";
+import Logo from "@/assets/images/logo.svg";
 import Image from "next/image";
 
 const Header = () => {
@@ -31,21 +31,7 @@ const Header = () => {
       }`}
     >
       <Link href="/" className="flex items-center space-x-2">
-        <Image src={Logo.src} alt="Nexo" width="70" height={50} />
-        <p className="flex flex-col">
-          <span className="text-xs font-bold text-gray-900 dark:text-white">
-            N
-          </span>
-          <span className="text-xs font-bold text-gray-900 dark:text-white">
-            E
-          </span>
-          <span className="text-xs font-bold text-gray-900 dark:text-white">
-            X
-          </span>
-          <span className="text-xs font-bold text-gray-900 dark:text-white">
-            O
-          </span>
-        </p>
+        <Image src={Logo.src} alt="Nexo" width={100} height={50} />
       </Link>
 
       <div className="hidden md:flex items-center space-x-8">

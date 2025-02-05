@@ -10,7 +10,10 @@ const AIPromo = () => {
         muted
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://res.cloudinary.com/divcixw4e/video/upload/v1738675345/Nexo_future_video2_sfhpf8.mov" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/divcixw4e/video/upload/v1738675345/Nexo_future_video2_sfhpf8.mov"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
@@ -23,8 +26,9 @@ const AIPromo = () => {
               through <span className="text-blue-400">AI</span>
             </h1>
             <p className="mt-4 text-lg text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              NEXO harnesses cutting-edge artificial intelligence to
+              revolutionize product development and innovation across multiple
+              domains.
             </p>
           </div>
         </div>
