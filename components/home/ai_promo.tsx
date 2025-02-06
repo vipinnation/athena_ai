@@ -17,15 +17,15 @@ const AIPromo = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute w-full inset-0 bg-black bg-opacity-50 flex items-center justify-around">
-        <div className="w-2/5">
+      <div className="absolute w-full inset-0 bg-black bg-opacity-50 flex items-center justify-around flex-col md:flex-row">
+        <div className="w-full px-12 md:w-2/5">
           <div className="text-white ">
             <p className="uppercase text-sm tracking-wide">Watch</p>
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-2xl sm:text-4xl font-bold">
               How <span className="text-blue-400">NEXO</span> powers Products
               through <span className="text-blue-400">AI</span>
             </h1>
-            <p className="mt-4 text-lg text-gray-300">
+            <p className="mt-4 text-sm md:text-lg text-gray-300">
               NEXO harnesses cutting-edge artificial intelligence to
               revolutionize product development and innovation across multiple
               domains.
@@ -33,7 +33,7 @@ const AIPromo = () => {
           </div>
         </div>
 
-        <button className="mt-6 flex items-center space-x-3 bg-white text-black  p-6 rounded-full text-lg font-semibold shadow-lg">
+        <button className="hidden mt-6 md:flex items-center space-x-3 bg-white text-black  p-6 rounded-full text-lg font-semibold shadow-lg">
           <Play fill="black" className="w-12 h-12" />
         </button>
       </div>

@@ -19,11 +19,11 @@ export default function CTA() {
               LETS START
             </p>
 
-            <h1 className="dark:text-white text-3xl  font-semibold max-w-4xl leading-none">
+            <h1 className="dark:text-white text-2xl md:text-3xl  font-semibold max-w-4xl leading-none">
               Ready to Transform Your Business with AI?
             </h1>
 
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-none">
+            <p className="text-gray-400 text-md md:text-lg max-w-2xl mx-auto leading-none">
               Let&apos;s discuss how our AI solutions can drive your success.
             </p>
           </div>
