@@ -43,10 +43,10 @@ export default function Home() {
           alt=""
           className="absolute text-black"
         />
-        <h1 className=" text-5xl md:text-7xl font-light text-center max-w-5xl leading-tight text-white">
+        <h1 className=" text-2xl md:text-6xl font-light text-center max-w-5xl leading-tight text-white">
           Empowering Businesses with
           <br />
-          <span className="text-sky-400 font-semibold">AI</span>-Driven
+          <span className="text-sky-400 font-semibold text-gradient">AI</span>-Driven
           Solutions
         </h1>
 

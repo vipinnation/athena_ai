@@ -22,8 +22,8 @@ const AIPromo = () => {
           <div className="text-white ">
             <p className="uppercase text-sm tracking-wide">Watch</p>
             <h1 className="text-2xl sm:text-4xl font-bold">
-              How <span className="text-blue-400">NEXO</span> powers Products
-              through <span className="text-blue-400">AI</span>
+              How <span className="text-blue-400  text-gradient">NEXO</span> powers Products
+              through <span className="text-blue-400  text-gradient">AI</span>
             </h1>
             <p className="mt-4 text-sm md:text-lg text-gray-300">
               NEXO harnesses cutting-edge artificial intelligence to

@@ -9,14 +9,14 @@ const ServiceSection = () => {
           <p className="text-sm uppercase tracking-wider leading-none mb-6">
             Services
           </p>
-          <h1 className="text-2xl sm:text-4xl  font-medium leading-none">
+          <h1 className="text-xl sm:text-3xl  font-medium leading-none">
             Transform your business with AI
           </h1>
 
-          <p className="text-2xl sm:text-4xl py-3 font-medium leading-none  bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
+          <p className="text-xl sm:text-3xl py-1.5 font-medium leading-none  bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text  text-gradient">
             Opportunities and Innovations
           </p>
-          <h2 className="text-2xl sm:text-4xl leading-none font-medium">
+          <h2 className="text-xl sm:text-3xl leading-none font-medium">
             that will change the game
           </h2>
         </div>

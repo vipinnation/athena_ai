@@ -1,11 +1,11 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import CONSTANTS from "@/constants/constants";
 import Footer from "@/components/layout/footer.component";
 import Header from "@/components/layout/header.component";
 import type React from "react";
 import { ThemeProvider } from "@/components/layout/providers";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["vietnamese"] });
 
 export const metadata = {
   title: CONSTANTS.APP_DETAILS.name,
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`antialiased min-h-screen`}>
+      <body className={`antialiased min-h-screen ${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

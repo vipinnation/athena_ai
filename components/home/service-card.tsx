@@ -19,15 +19,15 @@ export function ServiceCard({
         <Sparkles className="h-6 w-6 text-gray-600" />
       </div>
       {isAIPowered ? (
-        <p className="text-blue-500 mb-2 leading-none">AI-Powered</p>
+        <p className="text-blue-500 mb-2 text-sm leading-none">AI-Powered</p>
       ) : (
         <p className="text-blue-500 mb-2 leading-none">&nbsp;</p>
       )}
-      <h3 className="text-2xl font-medium mb-2 leading-none">{title}</h3>
-      <p className="text-gray-600 mb-6">{description}</p>
+      <h3 className="text-xl font-medium mb-2 leading-none">{title}</h3>
+      <p className="text-gray-600 mb-6 text-sm">{description}</p>
       <a
         href="#"
-        className="text-gray-500 hover:text-gray-700 inline-flex items-center"
+        className="text-gray-500 hover:text-gray-700 inline-flex items-center text-sm"
       >
         View more {">"}
       </a>

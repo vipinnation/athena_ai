@@ -8,14 +8,14 @@ export default function CTA() {
       <div className="w-full max-w-7xl mx-auto relative">
         <div className="border-2  border-[#00a2ff]/20 rounded-lg py-6 flex flex-col items-center justify-center text-center space-y-8 shadow-[0_0_15px_rgba(0,162,255,0.1)]">
           <div className="relative">
-            <div className="w-16 h-16 bg-black border-2 border-[#00a2ff]/50 rounded-2xl flex items-center justify-center">
+            <div className="w-12 h-12 dark:bg-black border-2 border-[#00a2ff]/50 rounded-2xl flex items-center justify-center">
               <Zap className="w-8 h-8 text-[#00a2ff]" />
               <div className="absolute inset-0 bg-[#00a2ff]/20 blur-xl rounded-full"></div>
             </div>
           </div>
 
-          <div className="space-y-6">
-            <p className="text-[#00a2ff] text-sm tracking-[0.2em] font-medium  leading-none">
+          <div className="">
+            <p className="text-[#00a2ff] text-sm tracking-[0.2em] font-medium  leading-none  text-gradient">
               LETS START
             </p>
 

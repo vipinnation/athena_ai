@@ -40,8 +40,8 @@ const Header = () => {
         {["HOME", "SERVICES", "PROJECTS", "ABOUT", "CONTACT"].map((item) => (
           <Link
             key={item}
-            href={`/${item.toLowerCase()}`}
-            className="text-sm text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            href={`/${item !== "HOME" ?item.toLowerCase():""}`}
+            className="text-xs text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
             {item}
           </Link>
@@ -51,7 +51,7 @@ const Header = () => {
       <div className="flex items-center space-x-4">
         <Button
           variant="outline"
-          className="hidden md:block border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all bg-transparent"
+          className="hidden text-xs md:block border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all bg-transparent"
         >
           ENQUIRE NOW
         </Button>
@@ -86,7 +86,7 @@ const Header = () => {
           {["HOME", "SERVICES", "PROJECTS", "ABOUT", "CONTACT"].map((item) => (
             <Link
               key={item}
-              href={`/${item.toLowerCase()}`}
+              href={`/${item !== "HOME" ?item.toLowerCase():""}`}
               className="text-lg text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
