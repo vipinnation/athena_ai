@@ -35,6 +35,54 @@
   background: #555;
 }
 
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #4cc9f0 0%,
+    #4cc9f0 25%,
+    #4895ef 50%,
+    #4361ee 75%,
+    #3f37c9 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%
+  );
+}
+
+.gradient-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 50%
+  );
+}
+
+.topLeftBorderRadius {
+  border-top-left-radius: 13rem;
+}
+
+.bottomRightBorderRadius {
+  border-bottom-right-radius: 13rem;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

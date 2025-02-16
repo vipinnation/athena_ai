@@ -37,10 +37,10 @@ const Header = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">
-        {["HOME", "SERVICES", "PROJECTS", "ABOUT", "CONTACT"].map((item) => (
+        {["HOME", "SERVICES", "ABOUT", "CONTACT"].map((item) => (
           <Link
             key={item}
-            href={`/${item !== "HOME" ?item.toLowerCase():""}`}
+            href={`/${item !== "HOME" ? item.toLowerCase() : ""}`}
             className="text-xs text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
             {item}
@@ -68,14 +68,23 @@ const Header = () => {
           </Button>
         )}
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <button
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-black shadow-lg transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-black shadow-lg transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div className="flex justify-end p-4">
           <button onClick={() => setMobileMenuOpen(false)}>
@@ -83,10 +92,10 @@ const Header = () => {
           </button>
         </div>
         <div className="flex flex-col items-center space-y-4 py-4">
-          {["HOME", "SERVICES", "PROJECTS", "ABOUT", "CONTACT"].map((item) => (
+          {["HOME", "SERVICES", "ABOUT", "CONTACT"].map((item) => (
             <Link
               key={item}
-              href={`/${item !== "HOME" ?item.toLowerCase():""}`}
+              href={`/${item !== "HOME" ? item.toLowerCase() : ""}`}
               className="text-lg text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
