@@ -16,7 +16,7 @@ export const AboutSection: React.FC = () => {
         <div className="w-full text-base leading-9 mt-10 max-md:max-w-full">
           <div className="max-md:max-w-full dark:text-white">
             We understand the challenges and complexities that businesses face
-            in today's dynamic marketplace. That's why we offer a comprehensive
+            in today&apos;s dynamic marketplace. That&apos;s why we offer a comprehensive
             suite of consulting services.
           </div>
           <div className="mt-3 max-md:max-w-full dark:text-white">

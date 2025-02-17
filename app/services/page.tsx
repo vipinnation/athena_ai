@@ -1,259 +1,112 @@
 import OneIcon from "@/assets/images/one.png";
-import TwoIcon from "@/assets/images/two.png";
-import ThreeIcon from "@/assets/images/three.png";
-import FourIcon from "@/assets/images/four.png";
-import AndroidIcon from "@/assets/images/android.png";
 import Image from "next/image";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Brain, MessageSquare, TrendingUp, Eye } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import CTA from "@/components/home/cta";
-
-const services = [
-  {
-    title: "Machine Learning",
-    heading: "Smart Learning Machines",
-    numberImage: OneIcon.src,
-    options: {
-      heading: "We teach computers to be really helpful",
-      list: [
-        "Like having a super-smart friend who learns exactly how to help with your specific problems",
-        "Creating friendly computer assistants that can make simple decisions for you",
-        "Finding interesting patterns in information, like spotting when something unusual happens",
-        "Making everything work faster and better, like tuning up a bicycle",
-      ],
-    },
-    funExamples: [
-      {
-        text: "Like having a friendly helper who can answer questions about your favorite store 24 hours a day.",
-        showFullWidthLine: true,
-      },
-      {
-        text: "Similar to how you can tell if your friend is happy or sad by their message, our computers can understand customer reviews.",
-      },
-      {
-        text: "Just as you might sort your toys into different boxes, our computers can sort emails into different folders.",
-      },
-      {
-        text: "Like having a super-fast reader who can read 1000 books in one minute and tell you what they're about.",
-      },
-    ],
-  },
-  {
-    title: "Natural Language Processing",
-    heading: "Language Understanding Magic",
-    numberImage: TwoIcon.src,
-    options: {
-      heading: "We help computers understand and work with words",
-      list: [
-        "Creating friendly chat helpers that can answer questions all day long",
-        "Teaching computers to understand if people are happy or sad when they write something",
-        "Helping computers read and understand lots of papers and documents really quickly",
-        "Making computers that can talk to people in different languages, like having a helpful translator",
-      ],
-    },
-    funExamples: [
-      {
-        text: "Just like how you learn to recognize your friend's voice, we teach computers to recognize different customers' shopping habits.",
-        showFullWidthLine: true,
-      },
-      {
-        text: "Like how you know to bring an umbrella when you see dark clouds, we teach computers to order more supplies when inventory gets low.",
-      },
-      {
-        text: "Similar to how you notice when your toy is making a funny noise, our computers can notice when factory machines aren't working right.",
-      },
-    ],
-  },
-  {
-    title: "Predictive Analytics",
-    heading: "Computer Eyes",
-    numberImage: ThreeIcon.src,
-    options: {
-      heading: "We give computers the ability to see and understand pictures",
-      list: [
-        "Like having a super-careful helper that checks if things are made perfectly",
-        "Teaching computers to spot and name things in pictures, like finding all the dogs in a photo",
-        "Creating smart security cameras that can keep watch over important places",
-        "Helping computers read words in pictures and turn them into typed text",
-      ],
-    },
-    funExamples: [
-      {
-        text: "Like having a helper who can count all the red cars in a parking lot in just one second.",
-        showFullWidthLine: true,
-      },
-      {
-        text: "Similar to how you can spot a broken crayon, our computers can spot defective products on assembly lines.",
-      },
-      {
-        text: "Just as you can recognize your friends in photos, our computers can recognize faces in security videos.",
-      },
-      {
-        text: "Like having someone who can read all the street signs really quickly while you're driving.",
-      },
-    ],
-  },
-  {
-    title: "Computer Vision",
-    heading: "Future-Telling Tools",
-    numberImage: FourIcon.src,
-    options: {
-      heading: "We give computers the ability to see and understand pictures",
-      list: [
-        "Like having a weather forecast, but for your business's sales",
-        "Spotting possible problems before they happen",
-        "Finding the best way to use things so nothing goes to waste",
-        "Knowing when machines need a check-up before they break",
-      ],
-    },
-    funExamples: [
-      {
-        text: "Just like how you know to make more lemonade when it's hot outside, we help stores know what to stock up on.",
-        showFullWidthLine: true,
-      },
-      {
-        text: "Similar to how you can tell when your pet needs food before the bowl is empty, we help businesses predict when they need to order supplies.",
-      },
-      {
-        text: "Like knowing which games will be popular during recess, we help stores know which toys to order for Christmas.",
-      },
-      {
-        text: "Just as you can tell when your bike chain needs oil by the squeaky sound, we help factories know when machines need maintenance.",
-      },
-    ],
-  },
-];
+import Banner from "@/assets/images/home.svg";
+import SmartLearningHeader from "@/components/services/smart-learning-header";
+import SmartLearningGradientLine from "@/components/services/smart-line-gradient";
+import SmartLearningCapabilities from "@/components/services/smart-learning-capabilities";
+import SmartLearningSolutions from "@/components/services/smart-learning-solutions";
 
 function ServicesPage() {
   return (
-    <div className="min-h-screen pt-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-4xl mx-auto px-4 tracking-[0.35rem]">
-          <p className="text-sm uppercase tracking-wider leading-none mb-6">
-            Services
-          </p>
-          <h1 className="text-2xl sm:text-2xl  font-medium leading-none">
-            Transform your business with AI
-          </h1>
+    <div className="min-h-screen">
+      <div className="relative flex flex-col items-center justify-center min-h-[350px] px-4 sm:px-6 lg:px-8">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source
+            src="https://res.cloudinary.com/divcixw4e/video/upload/v1738674764/bg_video_x3qayd.mov"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10 dark:hidden"
+        >
+          <source
+            src="https://res.cloudinary.com/divcixw4e/video/upload/v1738769674/Comp_1_svd0ll.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
 
-          <p className="text-2xl sm:text-2xl leading-none py-0.75 font-medium leading-none  bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text  text-gradient">
-            Opportunities and Innovations
-          </p>
-          <h2 className="text-2xl sm:text-2xl  leading-none font-medium">
-            that will change the game
-          </h2>
-        </div>
+        <Image
+          src={Banner}
+          width={200}
+          height={200}
+          alt=""
+          className="absolute text-black"
+        />
+        <h1 className=" text-2xl md:text-6xl font-light text-center max-w-5xl leading-tight dark:text-white uppercase tracking-[0.25em]">
+          Services
+        </h1>
+      </div>
 
-        {services.map((service, index) => (
-          <div key={index}>
-            <div className="container mx-auto px-4">
-              <div
-                className={`mt-8 w-full max-w-7xl  flex flex-col   items-center gap-12 w-full max-w-6xl mx-auto py-12 px-6 ${index%2 ==0 ? "lg:flex-row":"lg:flex-row-reverse"}`}
-              >
-                <div className="flex-1">
-                  <div className="flex">
-                    <Image
-                      src={service.numberImage}
-                      alt="Illustration"
-                      width={100}
-                      height={60}
-                      className=""
-                    />
-                    <div>
-                      <div className="relative">
-                        <div className="relative inline-block px-4 py-1 text-sm font-semibold text-white gradient-bg rounded-sm shadow-md">
-                          {service.title}
-                        </div>
-                      </div>
+      <div className="flex flex-col ">
+        <SmartLearningHeader />
 
-                      <h2 className="text-3xl font-semibold text-gray-900 mt-4 dark:text-white">
-                      {service.heading}
-                      </h2>
-
-                      <div className="w-16 h-[2px] bg-gray-400 mt-2"></div>
-                    </div>
-                  </div>
-
-                  <div className="px-4">
-                    <p className="text-gray-700 mt-4 font-normal  leading-none dark:text-white">
-                      {service.options.heading}:
-                    </p>
-                    <ul className="mt-4 text-gray-700 space-y-2 font-normal text-sm list-disc px-6 dark:text-white">
-                      {service.options.list.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex-1 flex justify-center">
-                  <img
-                    src={AndroidIcon.src}
-                    alt="Illustration"
-                    width={500}
-                    height={500}
-                    className="w-full max-w-md"
-                  />
-                </div>
-              </div>
+        <div className="bg-white dark:bg-black flex w-full  flex-col overflow-hidden items-center px-[70px]  max-md:max-w-full max-md:px-5">
+          <div className="flex w-full items-center font-black justify-between flex-wrap max-md:max-w-full">
+            <div className="z-10 self-stretch text-[215px] whitespace-nowrap  text-center leading-loose w-[118px] my-auto px-3.5 max-md:text-[40px] py-24">
+              <Image
+                src={OneIcon.src}
+                alt="Illustration"
+                width={100}
+                height={60}
+                className=""
+              />
             </div>
-            <div className="w-full max-w-7xl mx-auto p-4">
-              <div className="flex justify-between items-center mb-8">
-                <h2 className="text-lg font-semibold text-gradient">
-                  FUN EXAMPLES
-                </h2>
-                <Button variant="outline" className="text-sm">
-                  View More
-                  <svg
-                    className="ml-2 h-4 w-4"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </Button>
-              </div>
+            <div
+              className={`text-right text-[65px] leading-[84px] bg-clip-text bg-[linear-gradient(211deg,#17C4FE_25.29%,#0FD2E4_47.01%,#1048D4_81.35%)] self-stretch w-[850px] my-auto max-md:max-w-full max-md:text-[40px] max-md:leading-[57px]`}
+              style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Smart Learning Machines
+            </div>
+          </div>
+          <SmartLearningGradientLine />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-                {service.funExamples.map((card, index) => (
-                  <GradientCard key={index} text={card.text} />
-                ))}
+          <div className="self-stretch w-full mt-[75px] py-[5px] max-md:max-w-full max-md:mt-10">
+            <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+              <div className="w-[56%] max-md:w-full max-md:ml-0">
+                <div className="self-stretch text-black font-normal my-auto max-md:max-w-full max-md:mt-10">
+                  <div className="flex w-full flex-col items-stretch text-[40px] tracking-[-0.5px] leading-[60px] justify-center max-md:max-w-full">
+                    <div className="dark:text-white">Unleashing Intelligence Beyond Automation</div>
+                    <div className="bg-[rgba(170,170,170,1)] flex min-h-[3px] w-[79px] mt-6 rounded-[10px]" />
+                  </div>
+                  <div className="text-base leading-9 mt-12 max-md:max-w-full max-md:mt-10 dark:text-white">
+                    At Nexo Future, our Smart Learning Machines bring the power
+                    of AI, machine learning, and deep analytics to transform raw
+                    data into actionable insights. Unlike traditional
+                    automation, our solutions learn, adapt, and evolve,
+                    continuously improving performance over time to meet the
+                    unique demands of modern businesses.
+                  </div>
+                </div>
+              </div>
+              <div className="w-[44%] ml-5 max-md:w-full max-md:ml-0">
+                <SmartLearningCapabilities />
               </div>
             </div>
           </div>
-        ))}
-      </div>
 
+          <SmartLearningGradientLine />
+          <SmartLearningSolutions />
+          <SmartLearningGradientLine />
+        </div>
+      </div>
       <CTA />
     </div>
   );
 }
-interface GradientCardProps {
-  text: string;
-}
-
-const GradientCard: React.FC<GradientCardProps> = ({ text }) => {
-  return (
-    <Card className="py-4 px-2 rounded-none relative">
-      <CardHeader className="w-full py-0 my-0">
-        <div className="w-full h-[4px] bg-gradient-to-r from-[#0f46d4] via-[#62b9d0] to-[#0f65c8]" />
-      </CardHeader>
-
-      <CardContent>
-        <p className="mt-4 text-sm text-gray-600 leading-relaxed dark:text-white">
-          {text}
-        </p>
-      </CardContent>
-    </Card>
-  );
-};
-
 export default ServicesPage;

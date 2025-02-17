@@ -21,8 +21,8 @@ export const WhyUsSection: React.FC = () => {
           title="We Can Help You To Grow Your Business."
         />
         <div className="text-black dark:text-white text-base font-normal leading-9 mt-10 max-md:max-w-full">
-          When you choose Zenith, you're not just hiring a consulting firm –
-          you're partnering with a team of dedicated professionals who are
+          When you choose Zenith, you&apos;re not just hiring a consulting firm –
+          you&apos;re partnering with a team of dedicated professionals who are
           invested in your success.
         </div>
         <div className="flex gap-[40px_75px] flex-wrap mt-10 max-md:max-w-full">

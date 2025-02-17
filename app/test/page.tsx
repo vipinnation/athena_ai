@@ -1,69 +1,55 @@
 import OneIcon from "@/assets/images/one.png";
 import AndroidIcon from "@/assets/images/android.png";
 import Image from "next/image";
+import SmartLearningCapabilities from "@/components/services/smart-learning-capabilities";
+import SmartLearningSolutions from "@/components/services/smart-learning-solutions";
+import SmartLearningGradientLine from "@/components/services/smart-line-gradient";
 export default function MachineLearning() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-16 min-h-screen">
-      <section className="flex flex-col lg:flex-row items-center gap-12 w-full max-w-6xl mx-auto py-12 px-6">
-        <div className="flex-1">
-          <div className="flex">
-            <Image
-              src={OneIcon.src}
-              alt="Illustration"
-              width={100}
-              height={60}
-              className=""
-            />
-            <div>
-              <div className="relative">
-                <div className="relative inline-block px-4 py-1 text-sm font-semibold text-white gradient-bg rounded-sm shadow-md">
-                  MACHINE LEARNING
-                </div>
-              </div>
-
-              <h2 className="text-3xl font-semibold text-gray-900 mt-4 dark:text-white">
-                Smart Learning Machines
-              </h2>
-
-              <div className="w-16 h-[2px] bg-gray-400 mt-2"></div>
+      <div className="bg-white self-center flex w-full max-w-[1441px] flex-col overflow-hidden items-center px-[70px] py-[100px] max-md:max-w-full max-md:px-5">
+          <div className="self-stretch flex w-full items-center font-black justify-between flex-wrap max-md:max-w-full">
+            <div className="z-10 self-stretch text-[215px] whitespace-nowrap text-white text-center leading-loose w-[118px] pt-[-90px] my-auto px-3.5 max-md:text-[40px]">
+              1
+            </div>
+            <div
+              className={`text-right text-[65px] leading-[84px] bg-clip-text bg-[linear-gradient(211deg,#17C4FE_25.29%,#0FD2E4_47.01%,#1048D4_81.35%)] self-stretch w-[850px] my-auto max-md:max-w-full max-md:text-[40px] max-md:leading-[57px]`}
+              style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Smart Learning Machines
             </div>
           </div>
-
-          <div className="px-4">
-            <p className="text-gray-700 mt-4 font-thin leading-none dark:text-white">
-              We teach computers to be really helpful:
-            </p>
-            <ul className="mt-4 text-gray-700 space-y-2 font-thin text-sm list-disc px-6 dark:text-white">
-              <li>
-                Like having a super-smart friend who learns exactly how to help
-                with your specific problems
-              </li>
-              <li>
-                Creating friendly computer assistants that can make simple
-                decisions for you
-              </li>
-              <li>
-                Finding interesting patterns in information, like spotting when
-                something unusual happens
-              </li>
-              <li>
-                Making everything work faster and better, like tuning up a
-                bicycle
-              </li>
-            </ul>
+          <SmartLearningGradientLine />
+          <div className="self-stretch w-full mt-[75px] py-[5px] max-md:max-w-full max-md:mt-10">
+            <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+              <div className="w-[56%] max-md:w-full max-md:ml-0">
+                <div className="self-stretch text-black font-normal my-auto max-md:max-w-full max-md:mt-10">
+                  <div className="flex w-full flex-col items-stretch text-[40px] tracking-[-0.5px] leading-[60px] justify-center max-md:max-w-full">
+                    <div>Unleashing Intelligence Beyond Automation</div>
+                    <div className="bg-[rgba(170,170,170,1)] flex min-h-[3px] w-[79px] mt-6 rounded-[10px]" />
+                  </div>
+                  <div className="text-base leading-9 mt-12 max-md:max-w-full max-md:mt-10">
+                    At Nexo Future, our Smart Learning Machines bring the power
+                    of AI, machine learning, and deep analytics to transform raw
+                    data into actionable insights. Unlike traditional
+                    automation, our solutions learn, adapt, and evolve,
+                    continuously improving performance over time to meet the
+                    unique demands of modern businesses.
+                  </div>
+                </div>
+              </div>
+              <div className="w-[44%] ml-5 max-md:w-full max-md:ml-0">
+                <SmartLearningCapabilities />
+              </div>
+            </div>
           </div>
+          <SmartLearningGradientLine />
+          <SmartLearningSolutions />
+          <SmartLearningGradientLine />
         </div>
-
-        <div className="flex-1 flex justify-center">
-          <img
-            src={AndroidIcon.src}
-            alt="Illustration"
-            width={500}
-            height={500}
-            className="w-full max-w-md"
-          />
-        </div>
-      </section>
     </div>
   );
 }
