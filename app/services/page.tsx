@@ -1,57 +1,38 @@
 import OneIcon from "@/assets/images/one.png";
 import Image from "next/image";
 import CTA from "@/components/home/cta";
-import Banner from "@/assets/images/home.svg";
-import SmartLearningHeader from "@/components/services/smart-learning-header";
-import SmartLearningGradientLine from "@/components/services/smart-line-gradient";
-import SmartLearningCapabilities from "@/components/services/smart-learning-capabilities";
 import SmartLearningSolutions from "@/components/services/smart-learning-solutions";
+import Link from "next/link";
+import FeatureSection from "@/components/services/feature-sections";
+import MlServiceIcon from "@/assets/images/ml_service.png";
+import { SmartLearningGradientLine } from "@/components/services/smart-line-gradient";
+import { GradientText } from "@/components/services/gradient-text";
+import HomeVideo from "@/components/ui/home-video";
 
 function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <div className="relative flex flex-col items-center justify-center min-h-[350px] px-4 sm:px-6 lg:px-8">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        >
-          <source
-            src="https://res.cloudinary.com/divcixw4e/video/upload/v1738674764/bg_video_x3qayd.mov"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10 dark:hidden"
-        >
-          <source
-            src="https://res.cloudinary.com/divcixw4e/video/upload/v1738769674/Comp_1_svd0ll.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-
-        <Image
-          src={Banner}
-          width={200}
-          height={200}
-          alt=""
-          className="absolute text-black"
-        />
-        <h1 className=" text-2xl md:text-6xl font-light text-center max-w-5xl leading-tight dark:text-white uppercase tracking-[0.25em]">
-          Services
-        </h1>
-      </div>
+      <HomeVideo title="Services" />
 
       <div className="flex flex-col ">
-        <SmartLearningHeader />
+        <div className="flex w-full flex-col overflow-hidden text-base font-normal uppercase tracking-[5.44px] leading-[41px] px-[70px] max-md:max-w-full max-md:pl-5">
+          <div className="flex min-h-[70px] items-center gap-[40px_200px] max-md:max-w-full relative left-[35%]">
+            <div className="justify-center items-center border border-[color:var(--G1,#17C4FE)] self-stretch flex min-w-60 gap-2.5 my-auto px-[30px] py-[5px] border-solid max-md:px-5">
+              <Link
+                href="/services"
+                className="bg-clip-text bg-[linear-gradient(211deg,#17C4FE_25.29%,#0FD2E4_47.01%,#1048D4_81.35%)] self-stretch my-auto"
+              >
+                Smart Learning Machines
+              </Link>
+            </div>
+            <Link
+              href="/services/natural-language-processing"
+              className="self-stretch dark:text-white  text-black text-center my-auto"
+            >
+              Language Understanding Magic
+            </Link>
+          </div>
+        </div>
 
         <div className="bg-white dark:bg-black flex w-full  flex-col overflow-hidden items-center px-[70px]  max-md:max-w-full max-md:px-5">
           <div className="flex w-full items-center font-black justify-between flex-wrap max-md:max-w-full">
@@ -64,45 +45,53 @@ function ServicesPage() {
                 className=""
               />
             </div>
-            <div
-              className={`text-right text-[65px] leading-[84px] bg-clip-text bg-[linear-gradient(211deg,#17C4FE_25.29%,#0FD2E4_47.01%,#1048D4_81.35%)] self-stretch w-[850px] my-auto max-md:max-w-full max-md:text-[40px] max-md:leading-[57px]`}
-              style={{
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Smart Learning Machines
-            </div>
+            <h1 className="flex max-w-4xl flex-col text-6xl font-black text-right leading-[84px] w-1/2">
+              <GradientText
+                text="Smart Learning Machines"
+                className="-mt-3 max-md:max-w-full "
+                gradientType="blue"
+              />
+            </h1>
           </div>
-          <SmartLearningGradientLine />
+          <SmartLearningGradientLine gradientType="lightBlue" />
 
-          <div className="self-stretch w-full mt-[75px] py-[5px] max-md:max-w-full max-md:mt-10">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-              <div className="w-[56%] max-md:w-full max-md:ml-0">
-                <div className="self-stretch text-black font-normal my-auto max-md:max-w-full max-md:mt-10">
-                  <div className="flex w-full flex-col items-stretch text-[40px] tracking-[-0.5px] leading-[60px] justify-center max-md:max-w-full">
-                    <div className="dark:text-white">Unleashing Intelligence Beyond Automation</div>
-                    <div className="bg-[rgba(170,170,170,1)] flex min-h-[3px] w-[79px] mt-6 rounded-[10px]" />
-                  </div>
-                  <div className="text-base leading-9 mt-12 max-md:max-w-full max-md:mt-10 dark:text-white">
-                    At Nexo Future, our Smart Learning Machines bring the power
+          <div className="py-12">
+            <FeatureSection
+              key="machine_learing_featuers"
+              title="Unleashing Intelligence Beyond Automation"
+              description="At Nexo Future, our Smart Learning Machines bring the power
                     of AI, machine learning, and deep analytics to transform raw
                     data into actionable insights. Unlike traditional
                     automation, our solutions learn, adapt, and evolve,
                     continuously improving performance over time to meet the
-                    unique demands of modern businesses.
-                  </div>
-                </div>
-              </div>
-              <div className="w-[44%] ml-5 max-md:w-full max-md:ml-0">
-                <SmartLearningCapabilities />
-              </div>
-            </div>
+                    unique demands of modern businesses."
+              capabilities={[
+                "Predict Trends & Risks",
+                "Automate with Intelligence",
+                "See and Understand",
+                "Optimize Operations",
+              ]}
+              borderGradient="lightBlue"
+            />
           </div>
 
-          <SmartLearningGradientLine />
-          <SmartLearningSolutions />
-          <SmartLearningGradientLine />
+          <SmartLearningGradientLine gradientType="lightBlue" />
+          <div className="py-12">
+            <SmartLearningSolutions
+              gradientType="lightBlue"
+              title="AI Solutions"
+              subTitle=" Powered by Smart Learning Machines"
+              imageSrc={MlServiceIcon.src}
+              solutions={[
+                "AI Chatbots & Virtual Assistants",
+                "Predictive Analytics & Risk Management",
+                "Fraud Detection & Cybersecurity",
+                "Computer Vision & Image Recognition",
+                "Voice & Language Processing AI",
+              ]}
+            />
+          </div>
+          <SmartLearningGradientLine gradientType="lightBlue" />
         </div>
       </div>
       <CTA />
