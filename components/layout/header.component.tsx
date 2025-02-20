@@ -34,7 +34,7 @@ const Header = () => {
     >
       <Link href="/" className="flex items-center space-x-2">
         <Image
-          src={theme == "light" ? DarkLogo.src : Logo.src}
+          src={theme == "dark" ? Logo.src : DarkLogo.src}
           alt="Nexo"
           width={100}
           height={50}

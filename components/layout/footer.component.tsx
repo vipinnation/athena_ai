@@ -1,3 +1,4 @@
+"use client";
 import {
   Facebook,
   Twitter,
@@ -9,8 +10,11 @@ import CONSTANTS from "@/constants/constants";
 import FooterSVG from "@/assets/images/footer.svg";
 import Logo from "@/assets/images/nexo.svg";
 import ShortLogo from "@/assets/images/icon.svg";
+import DarkLogo from "@/assets/images/dark_icon.png";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="flex bg-gray-100 dark:bg-black flex flex-col md:flex-row justify-center">
       <footer className="w-full pt-12 pb-4 px-6 md:px-12">
@@ -20,7 +24,13 @@ export default function Footer() {
               <Image src={Logo} width={75} height={75} alt="" />
             </div>
             <div className="text-gray-600 dark:text-gray-400 px-3">
-              <Image src={ShortLogo} alt="" width={75} height={75} className="text-center mx-auto md:mx-0"/>
+              <Image
+                src={theme == "dark" ? ShortLogo : DarkLogo}
+                alt=""
+                width={75}
+                height={75}
+                className="text-center mx-auto md:mx-0"
+              />
               <p className="text-sm py-2">
                 Empowering Businesses with AI-Driven Solutions
               </p>
