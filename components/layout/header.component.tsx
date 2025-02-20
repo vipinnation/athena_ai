@@ -6,6 +6,7 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import Logo from "@/assets/images/logo.svg";
+import DarkLogo from "@/assets/images/logo_dark.svg";
 import Image from "next/image";
 
 const Header = () => {
@@ -32,7 +33,12 @@ const Header = () => {
       }`}
     >
       <Link href="/" className="flex items-center space-x-2">
-        <Image src={Logo.src} alt="Nexo" width={100} height={50} />
+        <Image
+          src={theme == "light" ? DarkLogo.src : Logo.src}
+          alt="Nexo"
+          width={100}
+          height={50}
+        />
       </Link>
 
       {/* Desktop Navigation */}
