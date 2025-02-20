@@ -1,47 +1,91 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Brain } from "lucide-react";
+import FeatureSection from "@/components/services/feature-sections";
+import SmartLearningSolutions from "@/components/services/smart-learning-solutions";
+import { SmartLearningGradientLine } from "@/components/services/smart-line-gradient";
+import MlServiceIcon from "@/assets/images/ml_service.png";
+import HomeVideo from "@/components/ui/home-video";
+import CTA from "@/components/home/cta";
 
 export default function MachineLearningPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="flex items-center justify-center mb-8">
-        <Brain size={48} className="text-blue-600 mr-4" />
-        <h1 className="text-4xl font-bold">Machine Learning Services</h1>
-      </div>
-      <p className="text-xl mb-8 text-center">
-        Leverage advanced algorithms to automate decision-making processes and
-        uncover hidden patterns in your data.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Custom model development</li>
-            <li>Automated machine learning (AutoML)</li>
-            <li>Deep learning and neural networks</li>
-            <li>Reinforcement learning</li>
-            <li>Transfer learning</li>
-          </ul>
+    <div className="min-h-screen">
+      <HomeVideo title="Services" />
+
+      <div className=" bg-white dark:bg-black pt-8 px-3 sm:px-24">
+        <div className="">
+          <FeatureSection
+            key="machine_learing_featuers"
+            title="Unleashing Intelligence Beyond Automation"
+            description="At Nexo Future, our Smart Learning Machines bring the power
+                of AI, machine learning, and deep analytics to transform raw
+                data into actionable insights. Unlike traditional
+                automation, our solutions learn, adapt, and evolve,
+                continuously improving performance over time to meet the
+                unique demands of modern businesses."
+            capabilities={[
+              {
+                title: "Predict Trends & Risks",
+                description:
+                  "Analyze data to anticipate customer needs and market shifts",
+              },
+              {
+                title: "Automate with Intelligence",
+                description: "Enable real-time, Al-driven decision-making",
+              },
+              {
+                title: "See and Understand",
+                description:
+                  "Process images, videos, and language using computer vision and NLP",
+              },
+              {
+                title: "Optimize Operations",
+                description:
+                  "Reduce costs, minimize risks. and enhance efficiency.",
+              },
+            ]}
+            borderGradient="lightBlue"
+          />
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Applications</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Predictive maintenance</li>
-            <li>Fraud detection</li>
-            <li>Customer segmentation</li>
-            <li>Recommendation systems</li>
-            <li>Anomaly detection</li>
-          </ul>
+        <div className="my-3">
+          <SmartLearningGradientLine gradientType="lightBlue" />
         </div>
-      </div>
-      <div className="text-center">
-        <h2 className="text-2xl font-semibold mb-4">
-          Ready to harness the power of Machine Learning?
-        </h2>
-        <Button asChild size="lg">
-          <Link href="/contact">Get Started</Link>
-        </Button>
+
+        <div className="py-12">
+          <SmartLearningSolutions
+            gradientType="lightBlue"
+            title="AI Solutions"
+            subTitle=" Powered by Smart Learning Machines"
+            imageSrc={MlServiceIcon.src}
+            solutions={[
+              {
+                title: "AI Chatbots & Virtual Assistants",
+                description:
+                  "Deliver human-like conversations for seamless interactions.",
+              },
+              {
+                title: "Predictive Analytics & Risk Management",
+                description: "Make proactive, data-driven decisions.",
+              },
+              {
+                title: "Fraud Detection & Cybersecurity",
+                description: "Identify threats and anomalies instantly.",
+              },
+              {
+                title: "Computer Vision & Image Recognition",
+                description:
+                  "Automate quality control, surveillance, and authentication.",
+              },
+              {
+                title: "Voice & Language Processing AI",
+                description:
+                  "Power virtual assistants, speech-to-text, and real-time translation.",
+              },
+            ]}
+          />
+        </div>
+        <div className="my-3">
+          <SmartLearningGradientLine gradientType="lightBlue" />
+        </div>
+        <CTA />
       </div>
     </div>
   );

@@ -5,10 +5,10 @@ import { SectionHeading } from "../ui/section-heading";
 export const AboutSection: React.FC = () => {
   return (
     <section className="flex  items-center max-w-7xl mx-auto overflow-hidden justify-between flex-wrap py-12">
-      <div className="self-stretch min-w-60 w-[500px] my-auto rounded-[0px_0px_0px_0px] max-md:max-w-full">
+      <div className="hidden lg:block self-stretch min-w-60 w-[500px] my-auto rounded-[0px_0px_0px_0px] max-md:max-w-full">
         <GradientImage variant="primary" />
       </div>
-      <div className="self-stretch min-w-60 text-black font-normal w-[700px] my-auto max-md:max-w-full">
+      <div className="self-stretch min-w-60 text-black font-normal w-[700px] my-auto max-md:max-w-full text-center px-4">
         <SectionHeading
           subtitle="About Us"
           title="Your Trusted Advisors in Business Success."

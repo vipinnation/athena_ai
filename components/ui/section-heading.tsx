@@ -12,7 +12,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       <div className="text-[13px] leading-none tracking-[1.8px] uppercase max-md:max-w-full dark:text-white">
         {subtitle}
       </div>
-      <div className="text-[40px] leading-[60px] tracking-[-0.5px] mt-3 max-md:max-w-full dark:text-white">
+      <div className="text-2xl md:text-[40px] md:leading-[40px] md:leading-[60px] tracking-[-0.5px] mt-3 max-md:max-w-full dark:text-white">
         {title}
       </div>
     </div>

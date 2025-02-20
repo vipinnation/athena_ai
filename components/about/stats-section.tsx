@@ -32,7 +32,7 @@ export const StatsSection: React.FC = () => {
     { number: "40+", label: "Projects Completed" },
   ];
   return (
-    <section className="flex  text-center justify-between flex-wrap max-w-7xl py-12 mx-auto">
+    <section className="flex  text-center justify-between flex-wrap max-w-7xl py-12 mx-auto flex-col md:flex-row gap-y-4">
       {stats.map((stat, index) => (
         <StatItem key={index} {...stat} />
       ))}

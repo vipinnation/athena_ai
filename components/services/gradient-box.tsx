@@ -31,8 +31,8 @@ const GradientBox: React.FC<GradientBoxProps> = ({
       <Image
         src={imageSrc}
         alt={altText}
-        width={600}
-        height={600}
+        width={300}
+        height={300}
         className="object-cover text-center"
       />
     </div>

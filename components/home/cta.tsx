@@ -5,8 +5,8 @@ import { BackgroundBeamsWithCollision } from "../ui/background-beam-collision";
 export default function CTA() {
   return (
     <BackgroundBeamsWithCollision>
-      <div className="w-full max-w-7xl mx-auto relative">
-        <div className="border-2  border-[#00a2ff]/20 rounded-lg py-6 flex flex-col items-center justify-center text-center space-y-8 shadow-[0_0_15px_rgba(0,162,255,0.1)]">
+      <div className="w-full max-w-7xl mx-auto relative mx-4 mb-4">
+        <div className="border-2  border-[#00a2ff]/20 rounded-[100px_0px] md:rounded-[180px_0px] py-6 flex flex-col items-center justify-center text-center space-y-8 shadow-[0_0_15px_rgba(0,162,255,0.1)]">
           <div className="relative">
             <div className="w-12 h-12 dark:bg-black border-2 border-[#00a2ff]/50 rounded-2xl flex items-center justify-center">
               <Zap className="w-8 h-8 text-[#00a2ff]" />
@@ -19,7 +19,7 @@ export default function CTA() {
               LETS START
             </p>
 
-            <h1 className="dark:text-white text-2xl md:text-3xl  font-semibold max-w-4xl leading-none">
+            <h1 className="dark:text-white text-2xl md:text-3xl  font-semibold max-w-4xl leading-none py-2">
               Ready to Transform Your Business with AI?
             </h1>
 
