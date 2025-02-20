@@ -4,11 +4,23 @@ import { SmartLearningGradientLine } from "@/components/services/smart-line-grad
 import MlServiceIcon from "@/assets/images/ml_service.png";
 import HomeVideo from "@/components/ui/home-video";
 import CTA from "@/components/home/cta";
+import ZoomInComponent from "@/components/animation/zoom-in";
+import { GradientText } from "@/components/services/gradient-text";
 
 export default function PredictiveAnalyticsPage() {
   return (
     <div className="min-h-screen ">
-      <HomeVideo title="Services" />
+      <HomeVideo
+        title={
+          <ZoomInComponent>
+            <GradientText
+              text="Predictive Analytics"
+              className="font-bold tracking-[0.5rem] z-50"
+              gradientType="green"
+            />
+          </ZoomInComponent>
+        }
+      />
 
       <div className=" bg-white dark:bg-black  px-3 sm:px-24">
         <div className="py-12">

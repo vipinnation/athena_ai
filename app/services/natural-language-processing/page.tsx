@@ -9,11 +9,22 @@ import Link from "next/link";
 import CTA from "@/components/home/cta";
 import HomeVideo from "@/components/ui/home-video";
 import NLPIcon from "@/assets/images/nlp_service.png";
+import ZoomInComponent from "@/components/animation/zoom-in";
 
 export default function NLPPage() {
   return (
     <div className="min-h-screen">
-      <HomeVideo title="Services" />
+      <HomeVideo
+        title={
+          <ZoomInComponent>
+            <GradientText
+              text="Language Understanding Magic"
+              className="font-bold tracking-[0.5rem] z-50"
+              gradientType="orange"
+            />
+          </ZoomInComponent>
+        }
+      />
       <div className=" bg-white dark:bg-black  px-3 sm:px-24">
         <div className="py-12">
           <FeatureSection

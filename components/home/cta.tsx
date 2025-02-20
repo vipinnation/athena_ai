@@ -29,7 +29,7 @@ export default function CTA() {
           </div>
 
           <Link
-            href="#"
+            href="/contact"
             className="bg-black text-white px-8 py-3 rounded border border-[#00a2ff]/30 hover:border-[#00a2ff]/50 transition-colors tracking-wider text-sm tracking-[.75em]"
           >
             GET STARTED NOW

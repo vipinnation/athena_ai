@@ -4,47 +4,57 @@ import { SmartLearningGradientLine } from "@/components/services/smart-line-grad
 import MlServiceIcon from "@/assets/images/ml_service.png";
 import HomeVideo from "@/components/ui/home-video";
 import CTA from "@/components/home/cta";
+import TextStorke from "@/components/text/text-stroke";
+import { GradientText } from "@/components/services/gradient-text";
+import ZoomInComponent from "@/components/animation/zoom-in";
 
 export default function MachineLearningPage() {
   return (
     <div className="min-h-screen">
-      <HomeVideo title="Services" />
+      <HomeVideo
+        title={
+          <ZoomInComponent>
+            <GradientText
+              text="Smart Learning Machines"
+              className="font-bold tracking-[0.5rem] z-50"
+            />
+          </ZoomInComponent>
+        }
+      />
 
       <div className=" bg-white dark:bg-black pt-8 px-3 sm:px-24">
-        <div className="">
-          <FeatureSection
-            key="machine_learing_featuers"
-            title="Unleashing Intelligence Beyond Automation"
-            description="At Nexo Future, our Smart Learning Machines bring the power
+        <FeatureSection
+          key="machine_learing_featuers"
+          title="Unleashing Intelligence Beyond Automation"
+          description="At Nexo Future, our Smart Learning Machines bring the power
                 of AI, machine learning, and deep analytics to transform raw
                 data into actionable insights. Unlike traditional
                 automation, our solutions learn, adapt, and evolve,
                 continuously improving performance over time to meet the
                 unique demands of modern businesses."
-            capabilities={[
-              {
-                title: "Predict Trends & Risks",
-                description:
-                  "Analyze data to anticipate customer needs and market shifts",
-              },
-              {
-                title: "Automate with Intelligence",
-                description: "Enable real-time, Al-driven decision-making",
-              },
-              {
-                title: "See and Understand",
-                description:
-                  "Process images, videos, and language using computer vision and NLP",
-              },
-              {
-                title: "Optimize Operations",
-                description:
-                  "Reduce costs, minimize risks. and enhance efficiency.",
-              },
-            ]}
-            borderGradient="lightBlue"
-          />
-        </div>
+          capabilities={[
+            {
+              title: "Predict Trends & Risks",
+              description:
+                "Analyze data to anticipate customer needs and market shifts",
+            },
+            {
+              title: "Automate with Intelligence",
+              description: "Enable real-time, Al-driven decision-making",
+            },
+            {
+              title: "See and Understand",
+              description:
+                "Process images, videos, and language using computer vision and NLP",
+            },
+            {
+              title: "Optimize Operations",
+              description:
+                "Reduce costs, minimize risks. and enhance efficiency.",
+            },
+          ]}
+          borderGradient="lightBlue"
+        />
         <div className="my-3">
           <SmartLearningGradientLine gradientType="lightBlue" />
         </div>

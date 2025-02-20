@@ -9,11 +9,22 @@ import Image from "next/image";
 import ThreeIcon from "@/assets/images/three.png";
 import HomeVideo from "@/components/ui/home-video";
 import CTA from "@/components/home/cta";
+import ZoomInComponent from "@/components/animation/zoom-in";
 
 export default function ComputerVisionPage() {
   return (
     <div className="min-h-screen">
-      <HomeVideo title="Services" />
+      <HomeVideo
+        title={
+          <ZoomInComponent>
+            <GradientText
+              text="Computer Vision"
+              className="font-extrabold tracking-[0.5rem] z-50"
+              gradientType="darkBlue"
+            />
+          </ZoomInComponent>
+        }
+      />
 
       <div className=" bg-white dark:bg-black  px-3 sm:px-24">
         <div className="py-12">

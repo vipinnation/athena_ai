@@ -46,8 +46,8 @@ export default function Home() {
         <h1 className=" text-2xl md:text-6xl font-light text-center max-w-5xl leading-tight text-white">
           Empowering Businesses with
           <br />
-          <span className="text-sky-400 font-semibold text-gradient">AI</span>-Driven
-          Solutions
+          <span className="text-sky-400 font-semibold text-gradient">AI</span>
+          -Driven Solutions
         </h1>
 
         {/* Scroll Indicator */}
@@ -61,7 +61,9 @@ export default function Home() {
       <ServiceSection />
       <Technologies />
       <AIPromo />
-      <CTA />
+      <div className="my-4">
+        <CTA />
+      </div>
     </div>
   );
 }

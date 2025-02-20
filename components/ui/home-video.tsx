@@ -5,7 +5,7 @@ interface HeroSectionProps {
   primaryVideoSrc?: string;
   darkModeVideoSrc?: string;
   imageSrc?: string;
-  title: string;
+  title: string | React.ReactNode;
   titleClassName?: string;
   videoClassName?: string;
   containerClassName?: string;
@@ -50,7 +50,7 @@ const HomeVideo = ({
       />
 
       {/* Title */}
-      <h1 className={titleClassName}>{title}</h1>
+      <div className={titleClassName}>{title}</div>
     </div>
   );
 };
