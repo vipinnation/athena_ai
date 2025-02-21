@@ -59,7 +59,7 @@ export default function Home() {
       </div>
 
       <ServiceSection />
-      <Technologies />
+      {/* <Technologies /> */}
       <AIPromo />
       <div className="my-4">
         <CTA />
