@@ -18,6 +18,18 @@ const APP_DETAILS = {
 
 const CONSTANTS = {
   APP_DETAILS,
-  // Add more constants here...
+  MAIL: {
+    HOST: "smtp-relay.brevo.com",
+    USER: "69b8b2001@smtp-brevo.com",
+    PASS: "c3x0Sh7LRpkXF6JK",
+    RECEIVER: "shay@nexofuture.com",
+    SENDER: `Nexo Future 69b8b2001@smtp-brevo.com`,
+  },
+
+  CONTACT:{
+    PHONE:"",
+    EMAIL:"",
+    ADDRESS:"Redondo Beach, California"
+  }
 };
 export default CONSTANTS;

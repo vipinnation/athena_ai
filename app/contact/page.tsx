@@ -4,6 +4,7 @@ import HomeVideo from "@/components/ui/home-video";
 import {
   FacebookIcon,
   InstagramIcon,
+  LoaderCircle,
   Mail,
   Map,
   Phone,
@@ -12,6 +13,7 @@ import {
 import { useState, useEffect, ChangeEvent, FocusEvent, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import CONSTANTS from "@/constants/constants";
 interface FormData {
   firstName: string;
   lastName: string;
@@ -30,6 +32,7 @@ interface FocusedFields {
 }
 
 export default function ContactPage() {
+  const [isloading, setIsloading] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -95,11 +98,29 @@ export default function ContactPage() {
     formState: { errors },
   } = useForm<any>();
 
-  const onSubmit = (data: any) => {
-    console.log("Form Data: ", data);
-    toast.success("Message has been sent successfully");
-    reset(); // Reset form values
-    // Handle form submission here
+  const onSubmit = async (data: any) => {
+    try {
+      setIsloading(true);
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      setIsloading(false);
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      reset();
+      toast.success("Message sent successfully");
+    } catch (error) {
+      console.log("Error:", error);
+      toast.error("Something went wrong. Please try after sometime.");
+    }
   };
 
   return (
@@ -112,7 +133,7 @@ export default function ContactPage() {
             flex w-full md:w-[40%] lg:w-[35%] shrink-0  rounded-tl-[250px] items-end p-8 overflow-hidden 
           ${
             errors
-              ? "h-[20rem] md:min-h-[44rem]"
+              ? "h-[23rem] md:min-h-[44rem]"
               : "  h-[20rem] md:min-h-[40rem]"
           } h-full`}
         >
@@ -123,20 +144,18 @@ export default function ContactPage() {
 
           <div className="w-full">
             <div className="flex flex-col items-start gap-y-4 md:gap-y-6">
-              <p className="flex items-center text-white text-sm md:text-lg">
+              {/* <p className="flex items-center text-white text-sm md:text-lg">
                 <Phone className="mr-3" />
                 <span>+1012 3456 789</span>
-              </p>
-              <p className="flex items-center text-white text-sm md:text-lg">
+              </p> */}
+              {/* <p className="flex items-center text-white text-sm md:text-lg">
                 <Mail className="mr-3" />
                 <span>demo@gmail.com</span>
-              </p>
+              </p> */}
               <p className="flex items-center text-white text-sm md:text-lg">
                 <Map className="mr-3" />
                 <span>
-                  132 Dartmouth Street Boston,
-                  <br />
-                  Massachusetts 02156 United States
+                 {CONSTANTS.CONTACT.ADDRESS}
                 </span>
               </p>
             </div>
@@ -172,6 +191,7 @@ export default function ContactPage() {
                   {...register("firstName", {
                     required: "First Name is required",
                   })}
+                  disabled={isloading}
                   className="w-full bg-transparent border-b border-gray-800 dark:border-gray-200 pb-2 pt-6 focus:outline-none focus:border-gray-400"
                 />
                 {errors.firstName && (
@@ -191,6 +211,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
+                  disabled={isloading}
                   {...register("lastName", {
                     required: "Last Name is required",
                   })}
@@ -216,6 +237,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="email"
+                  disabled={isloading}
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -242,6 +264,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="tel"
+                  disabled={isloading}
                   {...register("phone", {
                     required: "Phone Number is required",
                   })}
@@ -266,6 +289,7 @@ export default function ContactPage() {
                   (option, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <input
+                        disabled={isloading}
                         type="radio"
                         {...register("subject", {
                           required: "Subject is required",
@@ -300,6 +324,7 @@ export default function ContactPage() {
                 Message
               </label>
               <textarea
+                disabled={isloading}
                 {...register("message", { required: "Message is required" })}
                 className="w-full bg-transparent border-b border-gray-800 dark:border-gray-200 pb-2 pt-8 min-h-24 focus:outline-none focus:border-gray-400"
               ></textarea>
@@ -311,7 +336,11 @@ export default function ContactPage() {
             </div>
 
             <div className="text-center">
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" disabled={isloading}>
+
+                {isloading == true ?  <LoaderCircle className="animate-spin" /> :null}
+                <span> Send Message</span>
+              </Button>
             </div>
           </form>
         </div>
