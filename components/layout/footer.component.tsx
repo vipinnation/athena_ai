@@ -12,6 +12,7 @@ import Logo from "@/assets/images/nexo.svg";
 import ShortLogo from "@/assets/images/icon.svg";
 import DarkLogo from "@/assets/images/dark_icon.png";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Footer() {
   const { theme, setTheme } = useTheme();
@@ -41,11 +42,9 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
               Support
             </h3>
-            <ul className="space-y-2 text-gray-600 text-sm dark:text-gray-400">
-              <li>Contact Us</li>
-              <li>FAQs</li>
-              <li>Live Chat</li>
-              <li>Terms of Service</li>
+            <ul className="space-y-2 text-gray-600 text-sm dark:text-gray-400 flex flex-col">
+              <Link href={"/contact"}>Contact Us</Link>
+              <Link href={"/contact"}>FAQs</Link>
             </ul>
           </div>
 
@@ -54,7 +53,7 @@ export default function Footer() {
               Company
             </h3>
             <ul className="space-y-2 text-gray-600 text-sm dark:text-gray-400">
-              <li>About Us</li>
+              <Link href={"/about"}>About Us</Link>
               <li>Careers</li>
               <li>Blog</li>
               <li>Privacy Policy</li>

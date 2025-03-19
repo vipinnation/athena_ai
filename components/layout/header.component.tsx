@@ -55,12 +55,14 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <Button
-          variant="outline"
-          className="hidden text-xs md:block border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all bg-transparent"
-        >
-          ENQUIRE NOW
-        </Button>
+        <Link href={"/contact"}>
+          <Button
+            variant="outline"
+            className="hidden text-xs md:block border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-all bg-transparent"
+          >
+            ENQUIRE NOW
+          </Button>
+        </Link>
         {mounted && (
           <Button
             variant="ghost"

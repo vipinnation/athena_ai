@@ -61,7 +61,7 @@ export default function Home() {
       <ServiceSection />
       {/* <Technologies /> */}
       <AIPromo />
-      <div className="my-4">
+      <div className="pt-4">
         <CTA />
       </div>
     </div>
